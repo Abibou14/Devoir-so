@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    FILE *fp1 = fopen ("projet1.fichier_source", "rb");
+    int bytes;
+    unsigned char buf[1024];
+       if (fp1 == NULL) {
+        printf ("Impossible de lire le fichier et la copies a echoue \n", projet1.fichier_source);
+        return 0;
+    }
+
+    MD5_Init (&FILE);
+    while ((bytes = fread (buf, 1, 1024, inFile)) != 0)
+        MD5_Update (&FILE, buf, bytes);
+    MD5_Final (c,&FILE);
+    for(i = 0; i < MD5_DIGEST_LENGTH; i++) printf("%02x", c[i]);
+    printf (" %s\n", filename);
+    fclose (File);
+    return 0;
+}
